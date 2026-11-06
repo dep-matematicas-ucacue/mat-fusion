@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAT FUSION · Concurso Matemático | Universidad Católica de Cuenca</title>
+  <meta name="description" content="MAT FUSION: concurso matemático organizado por el Departamento de Matemáticas de la Facultad de Informática, Ciencias de la Computación e Innovación Tecnológica de la Universidad Católica de Cuenca. Inscripción de equipos en línea.">
+  <meta name="theme-color" content="#112337">
+
+  <!-- Open Graph (vista previa al compartir en redes) -->
+  <meta property="og:title" content="MAT FUSION · Concurso Matemático UCACUE">
+  <meta property="og:description" content="Inscribe a tu equipo en el concurso matemático MAT FUSION de la Universidad Católica de Cuenca.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/logo-ucacue.png">
+
+  <link rel="icon" type="image/png" href="assets/img/logo-ucacue.png">
+
+  <!-- Tipografía institucional UCACUE: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons (CDN gratuito) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-offset="90" tabindex="0">
+
+  <!-- Enlace de salto para lectores de pantalla / teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- =========================================================
+       ENCABEZADO INSTITUCIONAL
+       ========================================================= -->
+  <header class="site-header">
+    <!-- Barra superior de contacto (estilo portal UCACUE) -->
+    <div class="topbar d-none d-md-block">
+      <div class="container d-flex justify-content-between align-items-center">
+        <ul class="topbar__list">
+          <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Av. de las Américas y Humboldt, Cuenca</li>
+          <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> <a href="mailto:info@ucacue.edu.ec">info@ucacue.edu.ec</a></li>
+        </ul>
+        <ul class="topbar__list">
+          <li><a href="https://www.ucacue.edu.ec" target="_blank" rel="noopener">Portal UCACUE</a></li>
+          <li><a href="https://evea.ucacue.edu.ec/" target="_blank" rel="noopener">EVEA</a></li>
+          <li><a href="https://biblioteca.ucacue.edu.ec/" target="_blank" rel="noopener">Biblioteca</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Navegación principal -->
+    <nav id="navPrincipal" class="navbar navbar-expand-lg navbar-dark main-nav" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#inicio">
+          <img src="assets/img/logo-ucacue.png" alt="Universidad Católica de Cuenca" width="106" height="36" class="brand-logo">
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-text">MAT <strong>FUSION</strong></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#que-es">El concurso</a></li>
+            <li class="nav-item"><a class="nav-link" href="#evento">Evento</a></li>
+            <li class="nav-item"><a class="nav-link" href="#normativa">Normativa</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn btn-uc-primary btn-sm px-3" href="#inscripcion">Inscribir Equipo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         1. HERO PRINCIPAL
+         ========================================================= -->
+    <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="hero__eyebrow"><span class="badge-dot" aria-hidden="true"></span> Inscripciones abiertas · Edición 2026</p>
+            <h1 id="hero-titulo" class="hero__title">MAT <span>FUSION</span></h1>
+            <p class="hero__subtitle">Concurso Matemático</p>
+            <div class="hero__org">
+              <p class="mb-1 text-uppercase small fw-semibold opacity-75">Organizado por</p>
+              <p class="mb-0"><strong>Departamento de Matemáticas</strong></p>
+              <p class="mb-0">Facultad de Informática, Ciencias de la Computación e Innovación Tecnológica</p>
+              <p class="mb-0">Universidad Católica de Cuenca</p>
+            </div>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#inscripcion" class="btn btn-uc-primary btn-lg">
+                <i class="bi bi-people-fill me-2" aria-hidden="true"></i>Inscribir Equipo
+              </a>
+              <a href="#normativa" class="btn btn-uc-outline-light btn-lg">
+                <i class="bi bi-file-earmark-pdf me-2" aria-hidden="true"></i>Ver normativa
+              </a>
+            </div>
+          </div>
+
+          <!-- Ilustración matemática (SVG inline: sin dependencias ni costos) -->
+          <div class="col-lg-5 d-none d-lg-block">
+            <figure class="hero__art" aria-hidden="true">
+              <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                  <linearGradient id="gCurve" x1="0" x2="1">
+                    <stop offset="0" stop-color="#E20613"/>
+                    <stop offset="1" stop-color="#FF6B5A"/>
+                  </linearGradient>
+                </defs>
+                <!-- Plano cartesiano -->
+                <g stroke="rgba(255,255,255,.12)" stroke-width="1">
+                  <path d="M30 70H390M30 130H390M30 190H390M30 250H390M30 310H390M30 370H390"/>
+                  <path d="M60 40V390M120 40V390M180 40V390M240 40V390M300 40V390M360 40V390"/>
+                </g>
+                <g stroke="rgba(255,255,255,.55)" stroke-width="2">
+                  <path d="M30 250H395"/><path d="M120 395V35"/>
+                </g>
+                <!-- Función seno y parábola -->
+                <path d="M30 250 C 70 160, 110 160, 150 250 S 230 340, 270 250 S 350 160, 390 250"
+                      fill="none" stroke="url(#gCurve)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M60 60 Q 180 470 300 60" fill="none" stroke="#7FB3FF" stroke-width="3" stroke-dasharray="6 6"/>
+                <!-- Triángulo y circunferencia -->
+                <circle cx="300" cy="120" r="48" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+                <path d="M300 120 L348 120 M300 120 L300 72" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+                <circle cx="300" cy="120" r="4" fill="#fff"/>
+                <!-- Puntos de intersección -->
+                <circle cx="150" cy="250" r="6" fill="#fff"/>
+                <circle cx="270" cy="250" r="6" fill="#fff"/>
+                <!-- Símbolos -->
+                <g font-family="Georgia, serif" fill="#fff" font-style="italic">
+                  <text x="40" y="115" font-size="40" opacity=".9">∑</text>
+                  <text x="330" y="330" font-size="44" opacity=".9">π</text>
+                  <text x="190" y="380" font-size="38" opacity=".8">∫</text>
+                  <text x="215" y="378" font-size="18" opacity=".8">f(x) dx</text>
+                  <text x="150" y="70" font-size="20" opacity=".75">a² + b² = c²</text>
+                  <text x="320" y="210" font-size="22" opacity=".75">√x</text>
+                </g>
+              </svg>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Indicadores rápidos -->
+        <ul class="hero__stats">
+          <li><i class="bi bi-people" aria-hidden="true"></i><span><strong>3</strong> integrantes titulares</span></li>
+          <li><i class="bi bi-diagram-3" aria-hidden="true"></i><span><strong>2</strong> categorías</span></li>
+          <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Modalidad <strong>presencial</strong></span></li>
+          <li><i class="bi bi-cash-coin" aria-hidden="true"></i><span>Inscripción <strong>gratuita</strong></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. ¿QUÉ ES MAT FUSION?
+         ========================================================= -->
+    <section id="que-es" class="section" aria-labelledby="que-es-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow">El concurso</p>
+          <h2 id="que-es-titulo" class="section-title">¿Qué es MAT FUSION?</h2>
+          <p class="section-lead">
+            MAT FUSION es un concurso matemático por equipos que reúne a estudiantes de distintas instituciones
+            educativas para enfrentar desafíos que combinan razonamiento, creatividad y aplicación práctica de
+            las matemáticas. Es una iniciativa del Departamento de Matemáticas de la UCACUE para fortalecer
+            el pensamiento lógico y acercar a los jóvenes a las áreas STEM.
+          </p>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-bullseye" aria-hidden="true"></i></div>
+              <h3>Objetivos del concurso</h3>
+              <p>Estimular el talento matemático, identificar estudiantes destacados y fomentar una cultura de excelencia académica entre colegios y universidad.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div>
+              <h3>Importancia de las matemáticas</h3>
+              <p>Las matemáticas son el lenguaje de la ciencia y la tecnología: base para la ingeniería, la informática, la economía y la toma de decisiones.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>
+              <h3>Razonamiento lógico</h3>
+              <p>Retos diseñados para desarrollar el pensamiento abstracto, la deducción y la capacidad de argumentar con rigor.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-puzzle" aria-hidden="true"></i></div>
+              <h3>Resolución de problemas</h3>
+              <p>Problemas no rutinarios que exigen modelar situaciones, elegir estrategias y verificar resultados bajo presión de tiempo.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-people" aria-hidden="true"></i></div>
+              <h3>Trabajo colaborativo</h3>
+              <p>La competencia es por equipos: comunicar ideas, distribuir tareas y construir soluciones en conjunto es parte del desafío.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="feature-card">
+              <div class="feature-card__icon"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+              <h3>Competencias STEM</h3>
+              <p>Integración de ciencia, tecnología, ingeniería y matemáticas en desafíos aplicados a contextos reales.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. INFORMACIÓN DEL EVENTO
+         (Editar aquí fecha, lugar, modalidad y categorías)
+         ========================================================= -->
+    <section id="evento" class="section section--alt" aria-labelledby="evento-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow">Información general</p>
+          <h2 id="evento-titulo" class="section-title">Información del evento</h2>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-tile">
+              <i class="bi bi-calendar-event" aria-hidden="true"></i>
+              <h3>Fecha</h3>
+              <p><strong>Por confirmar</strong><br>Edición 2026</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-tile">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <h3>Lugar</h3>
+              <p><strong>Campus Matriz UCACUE</strong><br>Av. de las Américas y Humboldt, Cuenca</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-tile">
+              <i class="bi bi-person-workspace" aria-hidden="true"></i>
+              <h3>Modalidad</h3>
+              <p><strong>Presencial</strong><br>Competencia por equipos</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="info-tile">
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              <h3>Inscripciones</h3>
+              <p><strong>Abiertas</strong><br>Hasta completar cupos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6">
+            <div class="category-card">
+              <span class="category-card__tag">Categoría A</span>
+              <h3>Educación General Básica Superior</h3>
+              <p>Estudiantes de 8.º, 9.º y 10.º año de EGB.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="category-card">
+              <span class="category-card__tag">Categoría B</span>
+              <h3>Bachillerato General Unificado</h3>
+              <p>Estudiantes de 1.º, 2.º y 3.º año de BGU.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice mt-4" role="note">
+          <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+          <p class="mb-0">
+            Cada equipo se conforma con un <strong>tutor responsable</strong>, <strong>3 integrantes titulares</strong>
+            y, de forma opcional, un tutor suplente y un estudiante suplente. La categoría se asigna según el nivel educativo
+            de los integrantes. Consulte los detalles en la normativa oficial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. NORMATIVA OFICIAL
+         Para actualizar: reemplazar docs/normativa-mat-fusion-2026.pdf
+         conservando el mismo nombre. Tamaño y fecha se leen
+         automáticamente del servidor (script.js → Normativa).
+         ========================================================= -->
+    <section id="normativa" class="section" aria-labelledby="normativa-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow">Documentos</p>
+          <h2 id="normativa-titulo" class="section-title">NORMATIVA OFICIAL</h2>
+          <p class="section-lead">Lea las bases del concurso antes de inscribir a su equipo. La aceptación de la normativa es obligatoria.</p>
+        </header>
+
+        <article class="doc-card" id="docNormativa"
+                 data-file="docs/normativa-mat-fusion-2026.pdf"
+                 data-fallback-date="06/11/2026">
+          <div class="doc-card__icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+          <div class="doc-card__body">
+            <h3 class="doc-card__title">Normativa General MAT FUSION 2026</h3>
+            <p class="doc-card__desc">Bases, requisitos de participación, conformación de equipos, categorías, desarrollo de las pruebas, criterios de evaluación y premiación del concurso.</p>
+            <dl class="doc-card__meta">
+              <div><dt>Archivo</dt><dd id="docNombre">normativa-mat-fusion-2026.pdf</dd></div>
+              <div><dt>Actualización</dt><dd id="docFecha">06/11/2026</dd></div>
+              <div><dt>Tamaño</dt><dd id="docTamano">—</dd></div>
+            </dl>
+          </div>
+          <div class="doc-card__actions">
+            <a id="docDescargar" class="btn btn-uc-primary" href="docs/normativa-mat-fusion-2026.pdf" download>
+              <i class="bi bi-download me-2" aria-hidden="true"></i>Descargar PDF
+            </a>
+            <a id="docVer" class="btn btn-uc-outline" href="docs/normativa-mat-fusion-2026.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver en línea
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. FORMULARIO DE INSCRIPCIÓN
+         ========================================================= -->
+    <section id="inscripcion" class="section section--form" aria-labelledby="inscripcion-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-eyebrow">Registro</p>
+          <h2 id="inscripcion-titulo" class="section-title">Formulario de inscripción</h2>
+          <p class="section-lead">Complete los datos de su equipo. Los campos marcados con <span class="req" aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+
+            <!-- Resumen de errores (se muestra solo si hay errores al enviar) -->
+            <div id="formAlert" class="alert d-none" role="alert" tabindex="-1"></div>
+
+            <form id="formInscripcion" class="reg-form" novalidate autocomplete="on">
+
+              <!-- Honeypot anti-spam: invisible para personas -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="sitioWeb">No completar este campo</label>
+                <input type="text" id="sitioWeb" name="sitioWeb" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- PASO 1: Institución y equipo -->
+              <fieldset class="form-block">
+                <legend class="form-block__title"><span class="step">1</span> Institución y equipo</legend>
+                <div class="row g-3">
+                  <div class="col-md-7">
+                    <label for="institucion" class="form-label">Nombre de la institución educativa <span class="req">*</span></label>
+                    <input type="text" class="form-control" id="institucion" name="institucion"
+                           required maxlength="150" autocomplete="organization" aria-describedby="institucion-error">
+                    <div class="invalid-feedback" id="institucion-error"></div>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="equipo" class="form-label">Nombre del equipo <span class="req">*</span></label>
+                    <input type="text" class="form-control" id="equipo" name="equipo"
+                           required maxlength="60" aria-describedby="equipo-error">
+                    <div class="invalid-feedback" id="equipo-error"></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- PASO 2: Tutores -->
+              <fieldset class="form-block">
+                <legend class="form-block__title"><span class="step">2</span> Tutores</legend>
+
+                <h3 class="form-subtitle">Tutor responsable</h3>
+                <div class="row g-3" data-person="tutorResponsable">
+                  <div class="col-md-5">
+                    <label for="tr-nombre" class="form-label">Nombre completo <span class="req">*</span></label>
+                    <input type="text" class="form-control" id="tr-nombre" data-field="nombre"
+                           required maxlength="120" autocomplete="name" aria-describedby="tr-nombre-error">
+                    <div class="invalid-feedback" id="tr-nombre-error"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="tr-correo" class="form-label">Correo electrónico <span class="req">*</span></label>
+                    <input type="email" class="form-control" id="tr-correo" data-field="correo"
+                           required maxlength="100" autocomplete="email" inputmode="email" aria-describedby="tr-correo-error">
+                    <div class="invalid-feedback" id="tr-correo-error"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="tr-telefono" class="form-label">Teléfono <span class="req">*</span></label>
+                    <input type="tel" class="form-control" id="tr-telefono" data-field="telefono" data-rule="phone"
+                           required maxlength="20" autocomplete="tel" inputmode="tel" placeholder="09XXXXXXXX" aria-describedby="tr-telefono-error">
+                    <div class="invalid-feedback" id="tr-telefono-error"></div>
+                  </div>
+                </div>
+
+                <h3 class="form-subtitle mt-4">Tutor suplente <span class="optional">(opcional)</span></h3>
+                <div class="row g-3" data-person="tutorSuplente" data-optional-group>
+                  <div class="col-md-5">
+                    <label for="ts-nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="ts-nombre" data-field="nombre"
+                           maxlength="120" aria-describedby="ts-nombre-error">
+                    <div class="invalid-feedback" id="ts-nombre-error"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="ts-correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="ts-correo" data-field="correo"
+                           maxlength="100" inputmode="email" aria-describedby="ts-correo-error">
+                    <div class="invalid-feedback" id="ts-correo-error"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="ts-telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="ts-telefono" data-field="telefono" data-rule="phone"
+                           maxlength="20" inputmode="tel" placeholder="09XXXXXXXX" aria-describedby="ts-telefono-error">
+                    <div class="invalid-feedback" id="ts-telefono-error"></div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- PASO 3: Integrantes titulares (dinámico) -->
+              <fieldset class="form-block">
+                <legend class="form-block__title"><span class="step">3</span> Integrantes titulares</legend>
+                <p class="form-hint">El equipo debe tener <strong data-max="titulares">3</strong> integrantes titulares. Todos los campos son obligatorios.</p>
+                <div id="listaTitulares" class="member-list" data-group="titulares" aria-live="polite"></div>
+                <button type="button" class="btn btn-uc-add" id="btnAgregarTitular">
+                  <i class="bi bi-plus-lg me-1" aria-hidden="true"></i> Agregar Integrante
+                </button>
+              </fieldset>
+
+              <!-- PASO 4: Estudiantes suplentes (dinámico) -->
+              <fieldset class="form-block">
+                <legend class="form-block__title"><span class="step">4</span> Estudiantes suplentes <span class="optional">(opcional)</span></legend>
+                <p class="form-hint">Se permite <strong data-max="suplentes">1</strong> estudiante suplente. Si lo registra, complete todos sus datos.</p>
+                <div id="listaSuplentes" class="member-list" data-group="suplentes" aria-live="polite"></div>
+                <button type="button" class="btn btn-uc-add" id="btnAgregarSuplente">
+                  <i class="bi bi-plus-lg me-1" aria-hidden="true"></i> Agregar Suplente
+                </button>
+              </fieldset>
+
+              <!-- PASO 5: Aceptación de normativa -->
+              <fieldset class="form-block form-block--accept">
+                <legend class="form-block__title"><span class="step">5</span> Confirmación</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aceptaNormativa" required aria-describedby="aceptaNormativa-error">
+                  <label class="form-check-label" for="aceptaNormativa">
+                    Declaro que he leído y aceptado la <a href="#normativa">normativa oficial</a> del concurso MAT FUSION. <span class="req">*</span>
+                  </label>
+                  <div class="invalid-feedback" id="aceptaNormativa-error"></div>
+                </div>
+
+                <div class="d-grid d-md-flex justify-content-md-end mt-4">
+                  <button type="submit" class="btn btn-uc-primary btn-lg px-5" id="btnEnviar">
+                    <span class="btn-label"><i class="bi bi-send-fill me-2" aria-hidden="true"></i>Enviar inscripción</span>
+                    <span class="btn-loading d-none"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Enviando…</span>
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+
+            <!-- =====================================================
+                 MENSAJE DE CONFIRMACIÓN (oculto hasta registro exitoso)
+                 ===================================================== -->
+            <div id="confirmacion" class="success-panel d-none" tabindex="-1" aria-live="polite">
+              <div class="success-panel__icon" aria-hidden="true"><i class="bi bi-check-lg"></i></div>
+              <h3>¡Inscripción registrada con éxito!</h3>
+              <p class="lead mb-1">El equipo <strong id="okEquipo"></strong> de <strong id="okInstitucion"></strong> ha sido inscrito en MAT FUSION.</p>
+              <p class="success-panel__code">Código de inscripción: <strong id="okCodigo"></strong></p>
+              <p class="text-muted small mb-1">Fecha de registro: <span id="okFecha"></span></p>
+              <p id="okDemo" class="demo-note d-none">
+                <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+                Modo demostración: el backend aún no está configurado y el registro solo se guardó en este navegador.
+              </p>
+              <hr>
+              <p class="mb-2">Conserve su código de inscripción. Para consultas comuníquese con la organización:</p>
+              <ul class="success-panel__contact">
+                <li><i class="bi bi-envelope" aria-hidden="true"></i> <a data-contact="email" href="mailto:info@ucacue.edu.ec">info@ucacue.edu.ec</a></li>
+                <li><i class="bi bi-telephone" aria-hidden="true"></i> <a data-contact="phone" href="tel:+593984713417">098 471 3417</a></li>
+              </ul>
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <button type="button" class="btn btn-uc-outline" id="btnImprimir"><i class="bi bi-printer me-2" aria-hidden="true"></i>Imprimir comprobante</button>
+                <button type="button" class="btn btn-uc-primary" id="btnNuevaInscripcion"><i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Inscribir otro equipo</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER INSTITUCIONAL
+       ========================================================= -->
+  <footer class="site-footer" id="pie">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <img src="assets/img/logo-ucacue.png" alt="Universidad Católica de Cuenca" width="159" height="54" class="mb-3">
+          <p class="footer-title mb-1">Universidad Católica de Cuenca</p>
+          <p class="mb-1">Departamento de Matemáticas</p>
+          <p class="mb-0 footer-muted">Facultad de Informática, Ciencias de la Computación e Innovación Tecnológica</p>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h2 class="footer-heading">Contacto</h2>
+          <ul class="footer-list">
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Matriz Cuenca: Av. de las Américas y Humboldt</li>
+            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> <a data-contact="phone" href="tel:+593984713417">098 471 3417</a></li>
+            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> <a data-contact="email" href="mailto:info@ucacue.edu.ec">info@ucacue.edu.ec</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="footer-heading">Enlaces</h2>
+          <ul class="footer-list">
+            <li><a href="https://www.ucacue.edu.ec" target="_blank" rel="noopener">Portal institucional</a></li>
+            <li><a href="#normativa">Normativa oficial</a></li>
+            <li><a href="#inscripcion">Inscripción de equipos</a></li>
+          </ul>
+          <ul class="footer-social" aria-label="Redes sociales UCACUE">
+            <li><a href="https://www.facebook.com/universidadcatolicacuenca" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/ucatolicacuenca/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCGVWtXf8V7_-mknqXecQzgQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+            <li><a href="https://tiktok.com/@ucatocuenca" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a></li>
+            <li><a href="https://wa.me/593984713417" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© <span id="anioActual">2026</span> Universidad Católica de Cuenca</span>
+        <span>MAT FUSION · Departamento de Matemáticas</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       PLANTILLA DE INTEGRANTE / SUPLENTE
+       (equivale a un componente reutilizable: <MemberCard /> en React)
+       ========================================================= -->
+  <template id="tplMiembro">
+    <div class="member-card" data-member>
+      <div class="member-card__head">
+        <h4 class="member-card__title"><i class="bi bi-person-circle" aria-hidden="true"></i> <span data-member-label></span></h4>
+        <button type="button" class="btn btn-sm btn-link member-card__remove" data-remove>
+          <i class="bi bi-trash3" aria-hidden="true"></i> Quitar
+        </button>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-5">
+          <label class="form-label" data-for="nombre">Nombre completo</label>
+          <input type="text" class="form-control" data-field="nombre" maxlength="120">
+          <div class="invalid-feedback"></div>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" data-for="correo">Correo electrónico</label>
+          <input type="email" class="form-control" data-field="correo" maxlength="100" inputmode="email">
+          <div class="invalid-feedback"></div>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label" data-for="nivel">Nivel educativo</label>
+          <select class="form-select" data-field="nivel"></select>
+          <div class="invalid-feedback"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
