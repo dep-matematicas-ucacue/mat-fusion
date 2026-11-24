@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MAT FUSION · Universidad Católica de Cuenca
+   Mentes que Programan · Universidad Católica de Cuenca
    Lógica de la landing de inscripción (JavaScript vanilla, sin dependencias)
 
    Arquitectura (cada módulo equivale a un futuro componente/servicio):
@@ -41,9 +41,9 @@ const CONFIG = Object.freeze({
 
   /** Contacto que se muestra en la confirmación y el footer. */
   CONTACTO: {
-    email: 'info@ucacue.edu.ec',
-    telefono: '+593984713417',
-    telefonoVisible: '098 471 3417'
+    email: 'jaime.segarra@ucacue.edu.ec',
+    telefono: '+593987940199',
+    telefonoVisible: '098 794 0199'
   },
 
   /** Longitudes máximas (deben coincidir con backend/Code.gs). */
@@ -386,15 +386,15 @@ const Serializer = (() => {
    que Apps Script no soporta. La respuesta JSON sí es legible.
    -------------------------------------------------------------------------- */
 const Api = (() => {
-  const DEMO_KEY = 'matfusion_demo_inscripciones';
+  const DEMO_KEY = 'mqp_demo_inscripciones';
 
   const sendDemo = async (payload) => {
     await new Promise((r) => setTimeout(r, 900)); // simula latencia de red
     let list = [];
     try { list = JSON.parse(localStorage.getItem(DEMO_KEY)) || []; } catch { /* almacenamiento no disponible */ }
-    const codigo = `MF26-DEMO-${String(list.length + 1).padStart(4, '0')}`;
+    const codigo = `MQP26-DEMO-${String(list.length + 1).padStart(4, '0')}`;
     try { localStorage.setItem(DEMO_KEY, JSON.stringify([...list, { codigo, ...payload }])); } catch { /* ignorar */ }
-    console.info('[MAT FUSION] Modo demostración. Registro guardado localmente:', { codigo, ...payload });
+    console.info('[Mentes que Programan] Modo demostración. Registro guardado localmente:', { codigo, ...payload });
     return { ok: true, codigo, fecha: new Date().toISOString(), demo: true };
   };
 
@@ -565,7 +565,7 @@ const App = (() => {
     Normativa.init();
 
     if (!CONFIG.API_URL) {
-      console.warn('[MAT FUSION] CONFIG.API_URL está vacío: el formulario funciona en MODO DEMOSTRACIÓN. Consulte README.md para conectar Google Sheets.');
+      console.warn('[Mentes que Programan] CONFIG.API_URL está vacío: el formulario funciona en MODO DEMOSTRACIÓN. Consulte README.md para conectar Google Sheets.');
     }
   };
 

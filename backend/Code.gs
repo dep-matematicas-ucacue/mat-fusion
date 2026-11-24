@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * MAT FUSION · Backend gratuito con Google Apps Script + Google Sheets
+ * Mentes que Programan · Backend gratuito con Google Apps Script + Google Sheets
  * Universidad Católica de Cuenca · Departamento de Matemáticas
  *
  * Qué hace:
@@ -10,7 +10,7 @@
  *   - Guarda en dos hojas:
  *       "Inscripciones"  → 1 fila por equipo (vista resumida para revisar/exportar)
  *       "Participantes"  → 1 fila por persona (normalizada, lista para PostgreSQL)
- *   - Genera un código único: MF26-0001, MF26-0002, ...
+ *   - Genera un código único: MQP26-0001, MQP26-0002, ...
  *   - (Opcional) Envía un correo de confirmación al tutor responsable.
  *
  * Instalación: ver README.md → "Paso 2: Backend".
@@ -21,11 +21,11 @@
 
 /* ----------------------------- CONFIGURACIÓN ----------------------------- */
 const CFG = {
-  PREFIJO_CODIGO: 'MF26',
+  PREFIJO_CODIGO: 'MQP26',
   HOJA_INSCRIPCIONES: 'Inscripciones',
   HOJA_PARTICIPANTES: 'Participantes',
   ENVIAR_CORREO_CONFIRMACION: true,       // false para desactivar
-  CORREO_ORGANIZACION: 'info@ucacue.edu.ec', // copia oculta de cada confirmación ('' = ninguna)
+  CORREO_ORGANIZACION: 'jaime.segarra@ucacue.edu.ec', // copia oculta de cada confirmación ('' = ninguna)
   INSCRIPCIONES_ABIERTAS: true,           // false para cerrar el registro
   TITULARES: { min: 3, max: 3 },
   SUPLENTES: { max: 1 },
@@ -50,7 +50,7 @@ const ENCABEZADOS_PARTICIPANTES = [
 
 /** GET: comprobación de estado (útil para verificar el despliegue). */
 function doGet() {
-  return json_({ ok: true, servicio: 'MAT FUSION – Inscripciones', abiertas: CFG.INSCRIPCIONES_ABIERTAS });
+  return json_({ ok: true, servicio: 'Mentes que Programan – Inscripciones', abiertas: CFG.INSCRIPCIONES_ABIERTAS });
 }
 
 /** POST: registra una inscripción. */
@@ -189,7 +189,7 @@ function obtenerHoja_(ss, nombre, encabezados) {
   return hoja;
 }
 
-/** Siguiente código correlativo: MF26-0001, MF26-0002, ... */
+/** Siguiente código correlativo: MQP26-0001, MQP26-0002, ... */
 function siguienteCodigo_(hoja) {
   const props = PropertiesService.getScriptProperties();
   const n = Number(props.getProperty('ULTIMO_CORRELATIVO') || Math.max(hoja.getLastRow() - 1, 0)) + 1;
@@ -219,7 +219,7 @@ function enviarConfirmacion_(codigo, d) {
     const html =
       '<div style="font-family:Arial,sans-serif;color:#222;max-width:600px">' +
       '<div style="background:#112337;color:#fff;padding:20px;border-bottom:5px solid #E20613">' +
-      '<h2 style="margin:0">MAT FUSION · Concurso Matemático</h2>' +
+      '<h2 style="margin:0">Mentes que Programan · Concurso Matemático</h2>' +
       '<p style="margin:4px 0 0">Universidad Católica de Cuenca</p></div>' +
       '<div style="padding:20px">' +
       '<p>Estimado/a <b>' + esc_(d.tutorResponsable.nombreCompleto) + '</b>:</p>' +
@@ -231,11 +231,11 @@ function enviarConfirmacion_(codigo, d) {
       '<p>Departamento de Matemáticas<br>Facultad de Informática, Ciencias de la Computación e Innovación Tecnológica</p>' +
       '</div></div>';
 
-    const opciones = { htmlBody: html, name: 'MAT FUSION · UCACUE' };
+    const opciones = { htmlBody: html, name: 'Mentes que Programan · UCACUE' };
     if (CFG.CORREO_ORGANIZACION) opciones.bcc = CFG.CORREO_ORGANIZACION;
     if (d.tutorSuplente && d.tutorSuplente.correo) opciones.cc = d.tutorSuplente.correo;
 
-    MailApp.sendEmail(d.tutorResponsable.correo, 'Inscripción MAT FUSION – ' + codigo, 'Código de inscripción: ' + codigo, opciones);
+    MailApp.sendEmail(d.tutorResponsable.correo, 'Inscripción Mentes que Programan – ' + codigo, 'Código de inscripción: ' + codigo, opciones);
   } catch (err) {
     // La inscripción ya está guardada: un fallo de correo (p. ej. cuota diaria) no la invalida.
     console.warn('No se pudo enviar el correo de confirmación: ' + err);
@@ -248,10 +248,10 @@ function esc_(s) {
 
 /* ------------------------- MENÚ PARA ORGANIZADORES ------------------------ */
 
-/** Agrega un menú "MAT FUSION" a la hoja de cálculo. */
+/** Agrega un menú "Mentes que Programan" a la hoja de cálculo. */
 function onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu('MAT FUSION')
+    .createMenu('Mentes que Programan')
     .addItem('Preparar hojas', 'prepararHojas')
     .addItem('Ver resumen de inscripciones', 'verResumen')
     .addSeparator()
@@ -272,7 +272,7 @@ function verResumen() {
   const hojaP = obtenerHoja_(ss, CFG.HOJA_PARTICIPANTES, ENCABEZADOS_PARTICIPANTES);
   const equipos = Math.max(hojaI.getLastRow() - 1, 0);
   const personas = Math.max(hojaP.getLastRow() - 1, 0);
-  SpreadsheetApp.getUi().alert('Resumen MAT FUSION',
+  SpreadsheetApp.getUi().alert('Resumen Mentes que Programan',
     'Equipos inscritos: ' + equipos + '\nPersonas registradas (tutores + estudiantes): ' + personas +
     '\n\nPara exportar: Archivo → Descargar → Microsoft Excel (.xlsx) o CSV.',
     SpreadsheetApp.getUi().ButtonSet.OK);
