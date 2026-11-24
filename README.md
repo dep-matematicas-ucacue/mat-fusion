@@ -1,6 +1,6 @@
-# MAT FUSION · Inscripción de equipos
+# Mentes que Programan · Inscripción de equipos
 
-Landing page institucional de inscripción al concurso matemático **MAT FUSION**.
+Landing page institucional de inscripción al concurso matemático **Mentes que Programan**.
 Organiza el Departamento de Matemáticas de la Facultad de Informática, Ciencias de la Computación e Innovación Tecnológica de la **Universidad Católica de Cuenca**.
 
 **Costo de operación: 0 USD.** No se paga dominio, hosting, servidor, base de datos ni licencias.
@@ -38,7 +38,7 @@ mat-fusion/
 ├── styles.css                      Estilos con la identidad UCACUE
 ├── script.js                       Lógica modular (CONFIG al inicio)
 ├── assets/img/logo-ucacue.png      Logo institucional
-├── docs/normativa-mat-fusion-2026.pdf   ← REEMPLAZAR por la normativa oficial
+├── docs/normativa-mentes-que-programan-2026.pdf   ← REEMPLAZAR por la normativa oficial
 └── backend/Code.gs                 Código de Google Apps Script
 ```
 
@@ -56,7 +56,7 @@ Si `CONFIG.API_URL` está vacío, el formulario funciona en **modo demostración
 
 ## Paso 2: Backend (Google Sheets + Apps Script), unos 5 minutos
 
-1. Con la cuenta institucional del departamento, cree una hoja nueva en <https://sheets.new> y llámela *MAT FUSION – Inscripciones 2026*.
+1. Con la cuenta institucional del departamento, cree una hoja nueva en <https://sheets.new> y llámela *Mentes que Programan – Inscripciones 2026*.
 2. Abra el menú **Extensiones → Apps Script**.
 3. Borre el contenido de `Código.gs`, pegue **todo** el archivo `backend/Code.gs` y guarde.
 4. En la parte superior del editor, seleccione la función `prepararHojas` y pulse **Ejecutar**. Autorice los permisos cuando se le pidan. Se crearán las hojas *Inscripciones* y *Participantes*.
@@ -93,11 +93,22 @@ Si `CONFIG.API_URL` está vacío, el formulario funciona en **modo demostración
 ### Consultar y exportar inscripciones
 - Abra la hoja de Google. *Inscripciones* tiene una fila por equipo y *Participantes* una fila por persona.
 - Para exportar, use **Archivo → Descargar → Microsoft Excel (.xlsx)** o **Valores separados por comas (.csv)**.
-- El menú **MAT FUSION** de la hoja permite ver un resumen o hacer un registro de prueba.
+- El menú **Mentes que Programan** de la hoja permite ver un resumen o hacer un registro de prueba.
 - Para compartir con otros organizadores, use el botón **Compartir** de la hoja, con permiso de lector o editor.
 
 ### Actualizar la normativa
-Reemplace `docs/normativa-mat-fusion-2026.pdf` por el PDF oficial, **con el mismo nombre de archivo**, y vuelva a publicar. No hay que tocar nada más: el sitio lee el tamaño y la fecha de actualización directamente del servidor. El archivo actual es solo un **documento de ejemplo**.
+Reemplace `docs/normativa-mentes-que-programan-2026.pdf` por el PDF oficial, **con el mismo nombre de archivo**, y vuelva a publicar. No hay que tocar nada más: el sitio lee el tamaño y la fecha de actualización directamente del servidor. El archivo actual es solo un **documento de ejemplo**.
+
+**Paso a paso desde la web de GitHub (sin instalar nada y sin costo):**
+
+1. En su computadora, cambie el nombre del PDF oficial a `normativa-mentes-que-programan-2026.pdf`, exactamente así: en minúsculas, con guiones y sin espacios ni tildes.
+2. Abra el repositorio en GitHub y entre a la carpeta **docs**.
+3. Pulse **Add file → Upload files** y arrastre el PDF. Al tener el mismo nombre, GitHub reemplaza el archivo anterior.
+4. Escriba un mensaje corto, por ejemplo *Actualiza normativa oficial*, y pulse **Commit changes**.
+5. Espere de 1 a 2 minutos a que GitHub Pages vuelva a publicar el sitio. Si quiere seguir el avance, está en la pestaña **Actions**.
+6. Abra el sitio y pulse **Ver en línea** en la tarjeta de la normativa. Si sigue viendo el documento anterior, recargue sin caché con **Ctrl + F5**.
+
+Si prefiere usar otro nombre de archivo, cámbielo también en `index.html`, en los cinco lugares donde aparece `normativa-mentes-que-programan-2026.pdf`.
 
 ### Editar textos del evento
 La fecha, el lugar, la modalidad y las categorías están en `index.html`, sección `<!-- 3. INFORMACIÓN DEL EVENTO -->`. La fecha figura como **"Por confirmar"**.
